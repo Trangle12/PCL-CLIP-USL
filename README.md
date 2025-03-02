@@ -28,9 +28,9 @@ Make a new folder named `data` under the root directory. Download the datasets a
 For example, training the full model on Market1501 with GPU 0 and saving the log file and checkpoints to `logs/market-pclclip`:
 
 ```
-CUDA_VISIBLE_DEVICES=3 python train.py -b 256 -d market1501 --iters 200 --eps 0.5 --logs-dir ../log/market1501
+CUDA_VISIBLE_DEVICES=0 python train.py -b 256 -d market1501 --iters 200 --eps 0.5 --logs-dir ../log/market1501
 
-CUDA_VISIBLE_DEVICES=2 python train.py -b 256 -d msmt17 --iters 200 --eps 0.7 --logs-dir ../log/msmt
+CUDA_VISIBLE_DEVICES=0 python train.py -b 256 -d msmt17 --iters 200 --eps 0.7 --logs-dir ../log/msmt
 ```
 
 ## Note
@@ -42,4 +42,13 @@ The code is implemented based on following works.
 2. [CLIP-ReID](https://github.com/Syliz517/CLIP-ReID)
 3. [PCL-CLIP](https://github.com/RikoLi/PCL-CLIP)
 4. [ClusterContrast](https://github.com/alibaba/cluster-contrast-reid)
+
+## Results
+
+The results are on Market1501 (M) and MSMT17 (MS). The downloaded model checkpoints are placed in ```#~/checkpoints/[DATANAME]/[METHOD]/model best.pth.tar```, e.g., ```checkpoints/market1501/gl-ncplr/model_best.pth.tar```
+
+| Methods | M | Link | MS | Link |
+| --- | -- | -- | -- | - |
+| CC + PCL-CLIP | 86.9 (94.2) | - | 56.4 (77.9) | - |
+| CC + PCL-CLIP(Reproduce) | 85.5 (94.4) | - | 40.3 (69.1) | - |
 
