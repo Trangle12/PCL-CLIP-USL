@@ -1,4 +1,4 @@
-# [NOT official] Prototypical Contrastive Learning-based CLIP Fine-tuning for Unsupervised Person Re-Identification
+# [NOT Official] Prototypical Contrastive Learning-based CLIP Fine-tuning for Unsupervised Person Re-Identification
 
 [[paper]](https://arxiv.org/pdf/2310.17218.pdf)
 
