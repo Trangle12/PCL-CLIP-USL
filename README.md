@@ -28,9 +28,9 @@ Make a new folder named `data` under the root directory. Download the datasets a
 For example, training the full model on Market1501 with GPU 0 and saving the log file and checkpoints to `logs/market-pclclip`:
 
 ```
-CUDA_VISIBLE_DEVICES=0 python train.py -b 256 -d market1501 --iters 200 --eps 0.5 --logs-dir ../log/market1501
+CUDA_VISIBLE_DEVICES=0 python train.py -b 256 -d market1501 --iters 200 --eps 0.5 --logs-dir ./log/market1501
 
-CUDA_VISIBLE_DEVICES=0 python train.py -b 256 -d msmt17 --iters 200 --eps 0.7 --logs-dir ../log/msmt
+CUDA_VISIBLE_DEVICES=0 python train.py -b 256 -d msmt17 --iters 200 --eps 0.7 --logs-dir ./log/msmt
 ```
 
 ## Results
