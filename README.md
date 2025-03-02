@@ -34,6 +34,7 @@ CUDA_VISIBLE_DEVICES=2 python train.py -b 256 -d msmt17 --iters 200 --eps 0.7 --
 ```
 
 ## Note
+The model training requires the graphics card to be greater than 20GB. In this experiment, I used a single NVIDIA A100 with a memory of 40GB to carry out the relevant work. 
 
 The code is implemented based on following works.
 
