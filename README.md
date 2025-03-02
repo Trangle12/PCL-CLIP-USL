@@ -47,10 +47,8 @@ The model training requires the graphics card to be greater than 20GB. In this e
 
 The code is implemented based on following works.
 
-1. [TransReID](https://github.com/damo-cv/TransReID)
-2. [CLIP-ReID](https://github.com/Syliz517/CLIP-ReID)
-3. [PCL-CLIP](https://github.com/RikoLi/PCL-CLIP)
-4. [ClusterContrast](https://github.com/alibaba/cluster-contrast-reid)
+1. [PCL-CLIP](https://github.com/RikoLi/PCL-CLIP)
+2. [ClusterContrast](https://github.com/alibaba/cluster-contrast-reid)
 
 
 
