@@ -40,7 +40,7 @@ The results are on Market1501 (M) and MSMT17 (MS). The downloaded model checkpoi
 | Methods | M | Link | MS | Link |
 | --- | -- | -- | -- | - |
 | CC + PCL-CLIP | 86.9 (94.2) | - | 56.4 (77.9) | - |
-| CC + PCL-CLIP (Reproduce) | 88.5 (94.7) | [model](https://drive.google.com/file/d/1-o7XVkheqhIUV_QUayqmp0goO87xSf4Y/view?usp=drive_link) | 67.5 (85.1) | [model](https://drive.google.com/file/d/1-o7XVkheqhIUV_QUayqmp0goO87xSf4Y/view?usp=drive_link) |
+| CC + PCL-CLIP (Reproduce) | 88.5 (94.7) | [model](https://drive.google.com/drive/folders/1L3weoM5fLbTImnH3-MGC28D8dfdFY-3z?dmr=1&ec=wgc-drive-globalnav-goto) | 67.5 (85.1) | [model](https://drive.google.com/drive/folders/1L3weoM5fLbTImnH3-MGC28D8dfdFY-3z?dmr=1&ec=wgc-drive-globalnav-goto) |
 
 ## Note
 The model training requires the graphics card to be greater than 20GB. In this experiment, I used a single NVIDIA A100 with a memory of 40GB to carry out the relevant work. 
