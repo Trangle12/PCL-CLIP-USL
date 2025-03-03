@@ -1,0 +1,590 @@
+==========
+Args:Namespace(dataset='msmt17', batch_size=256, workers=4, height=256, width=128, num_instances=16, eps=0.7, eps_gap=0.02, k1=30, k2=6, momentum=0.1, lr=0.00035, weight_decay=0.0005, epochs=120, iters=200, step_size=20, seed=1, print_freq=100, eval_step=10, temp=0.05, data_dir='/data/tx/datasets', logs_dir='/data/tx/all/CLIP_CCL/log/msmt17')
+==========
+==> Load unlabeled dataset
+=> MSMT17_V1 loaded
+Dataset statistics:
+  ----------------------------------------
+  subset   | # ids | # images | # cameras
+  ----------------------------------------
+  train    |  1041 |    32621 |        15
+  query    |  3060 |    11659 |        15
+  gallery  |  3060 |    82161 |        15
+  ----------------------------------------
+Resized position embedding: %s to %s torch.Size([197, 768]) torch.Size([129, 768])
+Position embedding resize to height:16 width: 8
+Freeze patch projection layer with shape torch.Size([768, 3, 16, 16])
+Using warmup scheduler type
+=> EPOCH num=1
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 45.62615919113159
+Clustering criterion: eps: 0.700
+==> Statistics for epoch 0: 940 clusters
+=> Current Lr: 3.50e-06
+Epoch: [0][100/200]	Time 0.560 (0.961)	Loss 2.079 (3.196)	
+Epoch: [0][200/200]	Time 0.366 (0.921)	Loss 2.289 (2.603)	
+=> CUDA cache is released.
+=> EPOCH num=2
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 45.02138090133667
+==> Statistics for epoch 1: 951 clusters
+=> Current Lr: 3.82e-05
+Epoch: [1][100/200]	Time 1.831 (0.963)	Loss 1.662 (0.953)	
+Epoch: [1][200/200]	Time 0.656 (0.873)	Loss 1.140 (1.157)	
+=> CUDA cache is released.
+=> EPOCH num=3
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 40.296122312545776
+==> Statistics for epoch 2: 862 clusters
+=> Current Lr: 7.28e-05
+Epoch: [2][100/200]	Time 0.572 (0.931)	Loss 1.272 (0.794)	
+Epoch: [2][200/200]	Time 0.660 (0.936)	Loss 1.138 (1.014)	
+=> CUDA cache is released.
+=> EPOCH num=4
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 41.203068017959595
+==> Statistics for epoch 3: 877 clusters
+=> Current Lr: 1.07e-04
+Epoch: [3][100/200]	Time 0.363 (1.009)	Loss 0.515 (0.843)	
+Epoch: [3][200/200]	Time 0.535 (1.010)	Loss 0.995 (1.088)	
+=> CUDA cache is released.
+=> EPOCH num=5
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 38.883612871170044
+==> Statistics for epoch 4: 925 clusters
+=> Current Lr: 1.42e-04
+Epoch: [4][100/200]	Time 0.678 (0.952)	Loss 1.591 (0.775)	
+Epoch: [4][200/200]	Time 3.921 (1.001)	Loss 0.853 (1.089)	
+=> CUDA cache is released.
+=> EPOCH num=6
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 35.87191939353943
+==> Statistics for epoch 5: 912 clusters
+=> Current Lr: 1.77e-04
+Epoch: [5][100/200]	Time 0.367 (0.976)	Loss 1.474 (0.733)	
+Epoch: [5][200/200]	Time 2.706 (1.026)	Loss 1.872 (1.017)	
+=> CUDA cache is released.
+=> EPOCH num=7
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 36.867624282836914
+==> Statistics for epoch 6: 921 clusters
+=> Current Lr: 2.11e-04
+Epoch: [6][100/200]	Time 0.567 (0.882)	Loss 1.038 (0.682)	
+Epoch: [6][200/200]	Time 2.030 (0.963)	Loss 1.473 (0.976)	
+=> CUDA cache is released.
+=> EPOCH num=8
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 42.05702185630798
+==> Statistics for epoch 7: 915 clusters
+=> Current Lr: 2.46e-04
+Epoch: [7][100/200]	Time 0.360 (1.030)	Loss 1.495 (0.663)	
+Epoch: [7][200/200]	Time 1.419 (0.980)	Loss 0.765 (0.943)	
+=> CUDA cache is released.
+=> EPOCH num=9
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 36.439541816711426
+==> Statistics for epoch 8: 927 clusters
+=> Current Lr: 2.81e-04
+Epoch: [8][100/200]	Time 0.542 (1.080)	Loss 0.644 (0.644)	
+Epoch: [8][200/200]	Time 2.857 (1.014)	Loss 0.733 (0.889)	
+=> CUDA cache is released.
+=> EPOCH num=10
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 34.27785634994507
+==> Statistics for epoch 9: 936 clusters
+=> Current Lr: 3.15e-04
+Epoch: [9][100/200]	Time 1.093 (1.046)	Loss 1.322 (0.596)	
+Epoch: [9][200/200]	Time 0.698 (0.980)	Loss 1.488 (0.865)	
+Mean AP: 55.9%
+
+ * Finished epoch   9  model mAP: 55.9%   best: 55.9% *
+
+=> CUDA cache is released.
+=> EPOCH num=11
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 38.00352644920349
+==> Statistics for epoch 10: 918 clusters
+=> Current Lr: 3.50e-04
+Epoch: [10][100/200]	Time 0.689 (0.635)	Loss 1.116 (0.588)	
+Epoch: [10][200/200]	Time 0.479 (0.638)	Loss 0.994 (0.853)	
+=> CUDA cache is released.
+=> EPOCH num=12
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 34.76322627067566
+==> Statistics for epoch 11: 935 clusters
+=> Current Lr: 3.50e-04
+Epoch: [11][100/200]	Time 1.147 (0.612)	Loss 1.038 (0.565)	
+Epoch: [11][200/200]	Time 0.506 (0.612)	Loss 0.879 (0.840)	
+=> CUDA cache is released.
+=> EPOCH num=13
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 31.54669976234436
+==> Statistics for epoch 12: 909 clusters
+=> Current Lr: 3.50e-04
+Epoch: [12][100/200]	Time 0.513 (0.613)	Loss 1.000 (0.508)	
+Epoch: [12][200/200]	Time 0.457 (0.619)	Loss 1.014 (0.724)	
+=> CUDA cache is released.
+=> EPOCH num=14
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 35.395795583724976
+==> Statistics for epoch 13: 957 clusters
+=> Current Lr: 3.50e-04
+Epoch: [13][100/200]	Time 0.480 (0.608)	Loss 1.623 (0.508)	
+Epoch: [13][200/200]	Time 0.418 (0.617)	Loss 0.874 (0.719)	
+=> CUDA cache is released.
+=> EPOCH num=15
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 33.151445388793945
+==> Statistics for epoch 14: 954 clusters
+=> Current Lr: 3.50e-04
+Epoch: [14][100/200]	Time 0.505 (0.641)	Loss 1.210 (0.462)	
+Epoch: [14][200/200]	Time 0.427 (0.623)	Loss 0.729 (0.673)	
+=> CUDA cache is released.
+=> EPOCH num=16
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 36.79371619224548
+==> Statistics for epoch 15: 950 clusters
+=> Current Lr: 3.50e-04
+Epoch: [15][100/200]	Time 0.693 (0.607)	Loss 0.971 (0.407)	
+Epoch: [15][200/200]	Time 0.360 (0.609)	Loss 0.790 (0.614)	
+=> CUDA cache is released.
+=> EPOCH num=17
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 35.545260429382324
+==> Statistics for epoch 16: 948 clusters
+=> Current Lr: 3.50e-04
+Epoch: [16][100/200]	Time 0.612 (0.606)	Loss 0.471 (0.408)	
+Epoch: [16][200/200]	Time 0.361 (0.617)	Loss 0.836 (0.620)	
+=> CUDA cache is released.
+=> EPOCH num=18
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 36.434380531311035
+==> Statistics for epoch 17: 973 clusters
+=> Current Lr: 3.50e-04
+Epoch: [17][100/200]	Time 0.367 (0.596)	Loss 0.863 (0.372)	
+Epoch: [17][200/200]	Time 0.375 (0.618)	Loss 0.666 (0.559)	
+=> CUDA cache is released.
+=> EPOCH num=19
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 36.754103660583496
+==> Statistics for epoch 18: 962 clusters
+=> Current Lr: 3.50e-04
+Epoch: [18][100/200]	Time 0.602 (0.606)	Loss 1.036 (0.361)	
+Epoch: [18][200/200]	Time 0.367 (0.607)	Loss 0.877 (0.514)	
+=> CUDA cache is released.
+=> EPOCH num=20
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 34.59056067466736
+==> Statistics for epoch 19: 967 clusters
+=> Current Lr: 3.50e-04
+Epoch: [19][100/200]	Time 0.366 (0.605)	Loss 0.714 (0.344)	
+Epoch: [19][200/200]	Time 0.368 (0.607)	Loss 0.314 (0.513)	
+Mean AP: 64.1%
+
+ * Finished epoch  19  model mAP: 64.1%   best: 64.1% *
+
+=> CUDA cache is released.
+=> EPOCH num=21
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 32.889171838760376
+==> Statistics for epoch 20: 974 clusters
+=> Current Lr: 3.50e-05
+Epoch: [20][100/200]	Time 0.592 (0.613)	Loss 0.552 (0.315)	
+Epoch: [20][200/200]	Time 0.368 (0.608)	Loss 0.719 (0.450)	
+=> CUDA cache is released.
+=> EPOCH num=22
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 36.17192244529724
+==> Statistics for epoch 21: 987 clusters
+=> Current Lr: 3.50e-05
+Epoch: [21][100/200]	Time 0.629 (0.602)	Loss 0.782 (0.289)	
+Epoch: [21][200/200]	Time 0.476 (0.614)	Loss 0.791 (0.429)	
+=> CUDA cache is released.
+=> EPOCH num=23
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 36.36242961883545
+==> Statistics for epoch 22: 994 clusters
+=> Current Lr: 3.50e-05
+Epoch: [22][100/200]	Time 1.197 (0.613)	Loss 1.049 (0.278)	
+Epoch: [22][200/200]	Time 0.599 (0.602)	Loss 0.874 (0.412)	
+=> CUDA cache is released.
+=> EPOCH num=24
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 31.488941431045532
+==> Statistics for epoch 23: 993 clusters
+=> Current Lr: 3.50e-05
+Epoch: [23][100/200]	Time 0.690 (0.613)	Loss 0.317 (0.260)	
+Epoch: [23][200/200]	Time 0.702 (0.604)	Loss 0.290 (0.395)	
+=> CUDA cache is released.
+=> EPOCH num=25
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 35.086017370224
+==> Statistics for epoch 24: 1000 clusters
+=> Current Lr: 3.50e-05
+Epoch: [24][100/200]	Time 0.480 (0.602)	Loss 0.622 (0.259)	
+Epoch: [24][200/200]	Time 0.613 (0.603)	Loss 0.869 (0.407)	
+=> CUDA cache is released.
+=> EPOCH num=26
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 33.13811159133911
+==> Statistics for epoch 25: 999 clusters
+=> Current Lr: 3.50e-05
+Epoch: [25][100/200]	Time 0.389 (0.607)	Loss 0.835 (0.263)	
+Epoch: [25][200/200]	Time 0.594 (0.603)	Loss 0.191 (0.398)	
+=> CUDA cache is released.
+=> EPOCH num=27
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 38.65340757369995
+==> Statistics for epoch 26: 1002 clusters
+=> Current Lr: 3.50e-05
+Epoch: [26][100/200]	Time 0.772 (0.616)	Loss 0.669 (0.232)	
+Epoch: [26][200/200]	Time 0.492 (0.616)	Loss 0.519 (0.383)	
+=> CUDA cache is released.
+=> EPOCH num=28
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 32.46160578727722
+==> Statistics for epoch 27: 1001 clusters
+=> Current Lr: 3.50e-05
+Epoch: [27][100/200]	Time 0.488 (0.599)	Loss 0.205 (0.258)	
+Epoch: [27][200/200]	Time 0.570 (0.615)	Loss 0.881 (0.377)	
+=> CUDA cache is released.
+=> EPOCH num=29
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 33.81847929954529
+==> Statistics for epoch 28: 1006 clusters
+=> Current Lr: 3.50e-05
+Epoch: [28][100/200]	Time 0.511 (0.614)	Loss 0.540 (0.240)	
+Epoch: [28][200/200]	Time 0.703 (0.612)	Loss 0.386 (0.363)	
+=> CUDA cache is released.
+=> EPOCH num=30
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 33.2023241519928
+==> Statistics for epoch 29: 1007 clusters
+=> Current Lr: 3.50e-05
+Epoch: [29][100/200]	Time 0.397 (0.596)	Loss 0.885 (0.272)	
+Epoch: [29][200/200]	Time 0.360 (0.599)	Loss 0.449 (0.389)	
+Mean AP: 67.4%
+
+ * Finished epoch  29  model mAP: 67.4%   best: 67.4% *
+
+=> CUDA cache is released.
+=> EPOCH num=31
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 34.435946464538574
+==> Statistics for epoch 30: 1006 clusters
+=> Current Lr: 3.50e-05
+Epoch: [30][100/200]	Time 0.364 (0.587)	Loss 0.334 (0.249)	
+Epoch: [30][200/200]	Time 0.366 (0.595)	Loss 0.919 (0.371)	
+=> CUDA cache is released.
+=> EPOCH num=32
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 31.455845832824707
+==> Statistics for epoch 31: 1012 clusters
+=> Current Lr: 3.50e-05
+Epoch: [31][100/200]	Time 1.173 (0.592)	Loss 0.599 (0.267)	
+Epoch: [31][200/200]	Time 0.360 (0.588)	Loss 1.080 (0.366)	
+=> CUDA cache is released.
+=> EPOCH num=33
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 32.97214198112488
+==> Statistics for epoch 32: 1014 clusters
+=> Current Lr: 3.50e-05
+Epoch: [32][100/200]	Time 0.456 (0.606)	Loss 0.519 (0.251)	
+Epoch: [32][200/200]	Time 0.379 (0.600)	Loss 0.441 (0.370)	
+=> CUDA cache is released.
+=> EPOCH num=34
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 32.039493560791016
+==> Statistics for epoch 33: 1007 clusters
+=> Current Lr: 3.50e-05
+Epoch: [33][100/200]	Time 0.366 (0.594)	Loss 0.497 (0.208)	
+Epoch: [33][200/200]	Time 1.049 (0.594)	Loss 0.269 (0.346)	
+=> CUDA cache is released.
+=> EPOCH num=35
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 33.08937335014343
+==> Statistics for epoch 34: 1009 clusters
+=> Current Lr: 3.50e-05
+Epoch: [34][100/200]	Time 1.140 (0.596)	Loss 0.509 (0.237)	
+Epoch: [34][200/200]	Time 0.370 (0.596)	Loss 0.711 (0.336)	
+=> CUDA cache is released.
+=> EPOCH num=36
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 36.458749771118164
+==> Statistics for epoch 35: 1013 clusters
+=> Current Lr: 3.50e-05
+Epoch: [35][100/200]	Time 1.200 (0.598)	Loss 0.483 (0.243)	
+Epoch: [35][200/200]	Time 0.366 (0.600)	Loss 0.686 (0.348)	
+=> CUDA cache is released.
+=> EPOCH num=37
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 34.26683020591736
+==> Statistics for epoch 36: 1011 clusters
+=> Current Lr: 3.50e-05
+Epoch: [36][100/200]	Time 0.360 (0.596)	Loss 0.530 (0.216)	
+Epoch: [36][200/200]	Time 0.360 (0.595)	Loss 0.327 (0.323)	
+=> CUDA cache is released.
+=> EPOCH num=38
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 31.127991199493408
+==> Statistics for epoch 37: 1017 clusters
+=> Current Lr: 3.50e-05
+Epoch: [37][100/200]	Time 1.233 (0.598)	Loss 0.309 (0.224)	
+Epoch: [37][200/200]	Time 0.361 (0.595)	Loss 0.231 (0.327)	
+=> CUDA cache is released.
+=> EPOCH num=39
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 31.704094886779785
+==> Statistics for epoch 38: 1030 clusters
+=> Current Lr: 3.50e-05
+Epoch: [38][100/200]	Time 0.363 (0.600)	Loss 0.189 (0.210)	
+Epoch: [38][200/200]	Time 0.366 (0.601)	Loss 0.459 (0.324)	
+=> CUDA cache is released.
+=> EPOCH num=40
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 31.847740650177002
+==> Statistics for epoch 39: 1015 clusters
+=> Current Lr: 3.50e-05
+Epoch: [39][100/200]	Time 0.916 (0.596)	Loss 0.362 (0.218)	
+Epoch: [39][200/200]	Time 0.368 (0.597)	Loss 0.349 (0.331)	
+Mean AP: 66.9%
+
+ * Finished epoch  39  model mAP: 66.9%   best: 67.4%
+
+=> CUDA cache is released.
+=> EPOCH num=41
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 34.78756141662598
+==> Statistics for epoch 40: 1015 clusters
+=> Current Lr: 3.50e-06
+Epoch: [40][100/200]	Time 0.359 (0.599)	Loss 0.801 (0.204)	
+Epoch: [40][200/200]	Time 0.365 (0.601)	Loss 0.442 (0.318)	
+=> CUDA cache is released.
+=> EPOCH num=42
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 32.74925398826599
+==> Statistics for epoch 41: 1020 clusters
+=> Current Lr: 3.50e-06
+Epoch: [41][100/200]	Time 1.058 (0.593)	Loss 0.234 (0.234)	
+Epoch: [41][200/200]	Time 0.360 (0.597)	Loss 0.502 (0.329)	
+=> CUDA cache is released.
+=> EPOCH num=43
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 33.04371094703674
+==> Statistics for epoch 42: 1019 clusters
+=> Current Lr: 3.50e-06
+Epoch: [42][100/200]	Time 0.823 (0.601)	Loss 0.218 (0.221)	
+Epoch: [42][200/200]	Time 0.370 (0.596)	Loss 0.775 (0.315)	
+=> CUDA cache is released.
+=> EPOCH num=44
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 32.44451951980591
+==> Statistics for epoch 43: 1023 clusters
+=> Current Lr: 3.50e-06
+Epoch: [43][100/200]	Time 0.366 (0.590)	Loss 0.467 (0.225)	
+Epoch: [43][200/200]	Time 0.366 (0.600)	Loss 0.608 (0.315)	
+=> CUDA cache is released.
+=> EPOCH num=45
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 31.391871213912964
+==> Statistics for epoch 44: 1014 clusters
+=> Current Lr: 3.50e-06
+Epoch: [44][100/200]	Time 1.106 (0.591)	Loss 0.514 (0.200)	
+Epoch: [44][200/200]	Time 0.473 (0.603)	Loss 0.374 (0.328)	
+=> CUDA cache is released.
+=> EPOCH num=46
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 31.760828018188477
+==> Statistics for epoch 45: 1020 clusters
+=> Current Lr: 3.50e-06
+Epoch: [45][100/200]	Time 1.080 (0.622)	Loss 0.416 (0.204)	
+Epoch: [45][200/200]	Time 1.153 (0.624)	Loss 0.363 (0.312)	
+=> CUDA cache is released.
+=> EPOCH num=47
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 35.75916862487793
+==> Statistics for epoch 46: 1023 clusters
+=> Current Lr: 3.50e-06
+Epoch: [46][100/200]	Time 0.401 (0.611)	Loss 0.229 (0.221)	
+Epoch: [46][200/200]	Time 0.363 (0.613)	Loss 0.320 (0.327)	
+=> CUDA cache is released.
+=> EPOCH num=48
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 33.073646545410156
+==> Statistics for epoch 47: 1019 clusters
+=> Current Lr: 3.50e-06
+Epoch: [47][100/200]	Time 0.830 (0.602)	Loss 0.316 (0.216)	
+Epoch: [47][200/200]	Time 0.371 (0.612)	Loss 0.295 (0.313)	
+=> CUDA cache is released.
+=> EPOCH num=49
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 36.682936906814575
+==> Statistics for epoch 48: 1020 clusters
+=> Current Lr: 3.50e-06
+Epoch: [48][100/200]	Time 1.112 (0.621)	Loss 0.325 (0.215)	
+Epoch: [48][200/200]	Time 0.366 (0.606)	Loss 0.331 (0.326)	
+=> CUDA cache is released.
+=> EPOCH num=50
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 33.608949422836304
+==> Statistics for epoch 49: 1017 clusters
+=> Current Lr: 3.50e-06
+Epoch: [49][100/200]	Time 0.737 (0.591)	Loss 0.196 (0.201)	
+Epoch: [49][200/200]	Time 0.370 (0.595)	Loss 0.321 (0.315)	
+Mean AP: 67.4%
+
+ * Finished epoch  49  model mAP: 67.4%   best: 67.4% *
+
+=> CUDA cache is released.
+=> EPOCH num=51
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 36.33925104141235
+==> Statistics for epoch 50: 1020 clusters
+=> Current Lr: 3.50e-06
+Epoch: [50][100/200]	Time 0.983 (0.594)	Loss 0.318 (0.195)	
+Epoch: [50][200/200]	Time 0.364 (0.592)	Loss 0.353 (0.305)	
+=> CUDA cache is released.
+=> EPOCH num=52
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 35.89045739173889
+==> Statistics for epoch 51: 1020 clusters
+=> Current Lr: 3.50e-06
+Epoch: [51][100/200]	Time 0.358 (0.601)	Loss 0.424 (0.204)	
+Epoch: [51][200/200]	Time 0.359 (0.600)	Loss 0.664 (0.306)	
+=> CUDA cache is released.
+=> EPOCH num=53
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 32.545987129211426
+==> Statistics for epoch 52: 1019 clusters
+=> Current Lr: 3.50e-06
+Epoch: [52][100/200]	Time 1.146 (0.598)	Loss 0.563 (0.203)	
+Epoch: [52][200/200]	Time 0.359 (0.593)	Loss 0.289 (0.317)	
+=> CUDA cache is released.
+=> EPOCH num=54
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 34.47701597213745
+==> Statistics for epoch 53: 1018 clusters
+=> Current Lr: 3.50e-06
+Epoch: [53][100/200]	Time 1.332 (0.596)	Loss 0.274 (0.200)	
+Epoch: [53][200/200]	Time 0.368 (0.600)	Loss 0.180 (0.309)	
+=> CUDA cache is released.
+=> EPOCH num=55
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 33.42242097854614
+==> Statistics for epoch 54: 1019 clusters
+=> Current Lr: 3.50e-06
+Epoch: [54][100/200]	Time 1.151 (0.599)	Loss 0.236 (0.196)	
+Epoch: [54][200/200]	Time 0.367 (0.593)	Loss 0.548 (0.316)	
+=> CUDA cache is released.
+=> EPOCH num=56
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 33.68441367149353
+==> Statistics for epoch 55: 1021 clusters
+=> Current Lr: 3.50e-06
+Epoch: [55][100/200]	Time 1.071 (0.589)	Loss 0.440 (0.217)	
+Epoch: [55][200/200]	Time 0.367 (0.594)	Loss 0.190 (0.318)	
+=> CUDA cache is released.
+=> EPOCH num=57
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 30.912164449691772
+==> Statistics for epoch 56: 1020 clusters
+=> Current Lr: 3.50e-06
+Epoch: [56][100/200]	Time 0.368 (0.598)	Loss 0.201 (0.218)	
+Epoch: [56][200/200]	Time 0.367 (0.601)	Loss 0.324 (0.327)	
+=> CUDA cache is released.
+=> EPOCH num=58
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 33.86842107772827
+==> Statistics for epoch 57: 1022 clusters
+=> Current Lr: 3.50e-06
+Epoch: [57][100/200]	Time 0.417 (0.583)	Loss 0.237 (0.206)	
+Epoch: [57][200/200]	Time 0.367 (0.593)	Loss 0.333 (0.320)	
+=> CUDA cache is released.
+=> EPOCH num=59
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 32.794785499572754
+==> Statistics for epoch 58: 1020 clusters
+=> Current Lr: 3.50e-06
+Epoch: [58][100/200]	Time 0.367 (0.598)	Loss 0.527 (0.189)	
+Epoch: [58][200/200]	Time 0.367 (0.605)	Loss 0.491 (0.291)	
+=> CUDA cache is released.
+=> EPOCH num=60
+==> Create pseudo labels for unlabeled data
+Computing jaccard distance...
+Jaccard distance computing time cost: 32.580440044403076
+==> Statistics for epoch 59: 1023 clusters
+=> Current Lr: 3.50e-06
+Epoch: [59][100/200]	Time 0.914 (0.592)	Loss 0.419 (0.199)	
+Epoch: [59][200/200]	Time 0.359 (0.593)	Loss 0.410 (0.309)	
+Mean AP: 67.5%
+
+ * Finished epoch  59  model mAP: 67.5%   best: 67.5% *
+
+=> CUDA cache is released.
+==> Test with the best model:
+=> Loaded checkpoint '/data/tx/all/CLIP_CCL/log/msmt17/model_best.pth.tar'
+Mean AP: 67.5%
+CMC Scores:
+  top-1          85.1%
+  top-5          92.0%
+  top-10         93.7%
+Total running time:  4:15:59.712950
