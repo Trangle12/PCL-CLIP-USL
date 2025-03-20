@@ -81,15 +81,19 @@ def cm_hard(inputs, indexes, features, momentum=0.5):
     return CM_Hard.apply(inputs, indexes, features, torch.Tensor([momentum]).to(inputs.device))
 
 class ClusterMemory(nn.Module, ABC):
-    def __init__(self, num_features,num_samples, temp=0.05, momentum=0.2):
+    def __init__(self, num_features,num_samples, temp=0.05, momentum=0.2, use_hard=False):
         super(ClusterMemory, self).__init__()
         self.num_features = num_features
         self.num_samples = num_samples
         self.momentum = momentum
         self.temp = temp
+        self.use_hard = use_hard
 
     def forward(self, inputs, targets):
-        outputs = cm(inputs, targets, self.features, self.momentum)
+        if self.use_hard:
+            outputs = cm_hard(inputs, targets, self.features, self.momentum)
+        else:
+            outputs = cm(inputs, targets, self.features, self.momentum)
         outputs /= self.temp
         loss = F.cross_entropy(outputs, targets)
         return loss
