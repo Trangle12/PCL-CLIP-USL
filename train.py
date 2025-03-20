@@ -189,7 +189,7 @@ def main_worker(args):
 
         del cluster_loader, features
         # Create hybrid memory
-        memory = ClusterMemory(1280, num_cluster, temp=args.temp, momentum=args.momentum).cuda()
+        memory = ClusterMemory(1280, num_cluster, temp=args.temp, momentum=args.momentum, use_hard=args.use_hard).cuda()
 
         memory.features = F.normalize(cluster_features, dim=1).cuda()
 
@@ -282,6 +282,7 @@ if __name__ == '__main__':
     parser.add_argument('--eval-step', type=int, default=10)
     parser.add_argument('--temp', type=float, default=0.05,
                         help="temperature for scaling contrastive loss")
+    parser.add_argument('--use-hard', action="store_true")
     # path
     working_dir = osp.dirname(osp.abspath(__file__))
     parser.add_argument('--data-dir', type=str, metavar='PATH',
