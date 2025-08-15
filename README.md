@@ -34,8 +34,7 @@ CUDA_VISIBLE_DEVICES=0 python train.py -b 256 -d msmt17 --iters 200 --eps 0.7 --
 
 ## Results
 
-The results are on Market1501 (M) and MSMT17 (MS). The downloaded model checkpoints are placed in ```#~/checkpoints/[DATANAME]/[METHOD]/model best.pth.tar```, e.g., ```checkpoints/market1501/gl-ncplr/model_best.pth.tar```
-
+The results are on Market1501 (M) and MSMT17 (MS). 
 | Methods | M | Link | MS | Link |
 | --- | -- | -- | -- | - |
 | CC + PCL-CLIP | 86.9 (94.2) | - | 56.4 (77.9) | - |
